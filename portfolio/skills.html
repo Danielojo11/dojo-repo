@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.progress-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+        .progress-ring {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+        circle {
+            transition: stroke-dashoffset 0.5s ease;
+        }
+        .center-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+		#header nav a:hover {
+			font-size: 1em;
+			transition: 2s;
+		}
+		@media screen and (max-width: 720px) {
+			nav ul a {
+				display: block;
+				position: relative;
+				left: -2rem;
+				width: 100%;
+				margin-bottom: 20px;
+
+			}
+		}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+
+				<div id="links">
+				</div>
+				
+				<!-- Main -->
+				<header id="header">
+					<ul>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="skills.html">Skills</a></li>
+						<li><a href="about.html">About Me</a></li>
+					</ul>
+						<h1>Skills</h1>
+						<p>Software Engineer &nbsp;&bull;&nbsp; A.I. &nbsp;&bull;&nbsp; Machine Learning &nbsp;&bull;&nbsp; Backend Engineer</p>
+						<nav>
+							<ul>
+
+								<!-- Skill Badges -->
+								 <nav>
+									<ul style="border-spacing: 3rem;">
+										<a href="https://www.python.org">
+											<li>
+												<div class="progress-container" id="python">
+													<svg class="progress-ring" width="150" height="150">
+														<circle cx="75" cy="75" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+														<circle style="stroke-dashoffset: 48;" id="progress" cx="75" cy="75" r="50" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"></circle>
+													</svg>
+													<img class="center-image" src="./assets/css/images/python.png" alt="Python">
+												</div>
+											</li>
+										</a>
+
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
+										<a href="https://react.dev">
+											<li>
+												<div class="progress-container" id="react">
+													<svg class="progress-ring" width="150" height="150">
+														<circle cx="75" cy="75" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+														<circle style="stroke-dashoffset: 108;" id="progress" cx="75" cy="75" r="50" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"></circle>
+													</svg>
+													<img class="center-image" src="./assets/css/images/react.png" alt="React">
+												</div>
+	
+											</li>
+										</a>
+										
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.postgresql.org">
+											<li>
+												<div class="progress-container" id="postgres">
+													<svg class="progress-ring" width="150" height="150">
+														<circle cx="75" cy="75" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+														<circle style="stroke-dashoffset: 200;" id="progress" cx="75" cy="75" r="50" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"></circle>
+													</svg>
+													<img class="center-image" src="./assets/css/images/postgres.png" alt="postgres">
+												</div>
+	
+											</li>
+										</a>
+
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="https://www.git-scm.com">
+											<li>
+												<div class="progress-container" id="git">
+													<svg class="progress-ring" width="150" height="150">
+														<circle cx="75" cy="75" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+														<circle style="stroke-dashoffset: 200;" id="progress" cx="75" cy="75" r="50" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round"></circle>
+													</svg>
+													<img class="center-image" src="./assets/css/images/git.png" alt="git">
+												</div>
+	
+											</li>
+										</a>
+									</ul>
+								 </nav>
+
+								
+
+								
+								<script>
+									// function setProgress(percent) {
+									// 	const circle = document.getElementById('progress');
+									// 	const circumference = 2 * Math.PI * 50;
+									// 	const offset = circumference - (percent / 100) * circumference;
+									// 	circle.style.strokeDashoffset = offset;
+									// }
+									
+									// let progress = 0;
+									// setInterval(() => {
+									// 	progress = (progress + 5) % 101;
+									// 	setProgress(progress);
+									// }, 1000);
+								</script>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Dojo Labs.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
